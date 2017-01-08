@@ -9,3 +9,13 @@ mymessage
   background-color: #999999;
   margin-bottom: 30pt;
 } 
+
+body
+{
+    background-color: powderblue;
+}
+
+h1
+{
+    color: blue;
+}
