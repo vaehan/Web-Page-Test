@@ -23,7 +23,7 @@ function WinningHorse()
   }
   
   window.document.write("testing function inside of function<br>")
-  window.document.write(GetRandomHourse(1, 6))
+  window.document.write(GetRandomHorse(1, 6))
 }
 
 
