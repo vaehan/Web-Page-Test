@@ -13,10 +13,11 @@ mymessage
 body
 {
     background-color: powderblue;
-    font-size: 20px;
+    font-size: 8px;
 }
 
 h1
 {
     color: red;
+    font-size: 36px;
 }
