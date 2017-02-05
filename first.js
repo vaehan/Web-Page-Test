@@ -14,5 +14,6 @@ function toDo()
 
 function WinningHorse()
 {
-  window.document.write("testing")
+  window.document.write("testing<br>")
+  window.document.write(Math.random())
 }
