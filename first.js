@@ -1,1 +1,4 @@
-console.log("javascript is working.")
+function myFunction
+{
+console.log("javascript is working.");
+}
