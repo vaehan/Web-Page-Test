@@ -11,3 +11,8 @@ function toDo()
   window.document.write("First iteration, random 1-6, get input from user (with error checking), compare and output if it's a winner.<br>");
   window.document.write("Second iteration, add odds tables and wagers.<br>");
 }
+
+function WinningHorse()
+{
+  window.document.write("testing")
+}
