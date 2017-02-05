@@ -1,4 +1,4 @@
-function myFunction
+function myFunction()
 {
 console.log("javascript is working.");
 }
