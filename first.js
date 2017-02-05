@@ -1,8 +1,3 @@
-function myFunction()
-{
-window.document.write("Testing only - this text is coming from a separate file and a separate style sheet should also control the size of this text.");
-}
-
 function toDo()
 {
   window.document.write("Here are a few things I need to do to begin a test program (horse racing):<br>");
@@ -22,8 +17,7 @@ function WinningHorse()
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   
-  var theHorse = GetRandomHorse(1, 6);
-  return theHorse;
+ return GetRandomHorse(1, 6);
 }
 
 
