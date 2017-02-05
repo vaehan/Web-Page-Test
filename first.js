@@ -15,13 +15,15 @@ function toDo()
 // Needs to have math in the main file???  Is there a better way?
 function WinningHorse()
 {
-  window.document.write("testing inside of function<br>")
+  function GetRandomHorse(min, max)
+  {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  
+  window.document.write("testing function inside of function<br>")
   window.document.write(GetRandomHourse(1, 6))
 }
 
-function GetRandomHorse(min, max)
-{
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+
