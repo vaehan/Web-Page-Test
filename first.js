@@ -12,8 +12,9 @@ function toDo()
   window.document.write("Second iteration, add odds tables and wagers.<br>");
 }
 
+// Needs to have math in the main file???  Is there a better way?
 function WinningHorse()
 {
   window.document.write("testing inside of function<br>")
-  window.document.write(Math.floor(Math.random()*50))
+  window.document.write(Math.floor(Math.random()+1*6))
 }
