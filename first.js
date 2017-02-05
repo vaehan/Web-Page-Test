@@ -16,12 +16,12 @@ function toDo()
 function WinningHorse()
 {
   window.document.write("testing inside of function<br>")
-  window.document.write(Math.floor(Math.random()*(6-1)+1))
+  window.document.write(GetRandomHourse(1, 6))
 }
 
 function GetRandomHorse(min, max)
 {
-  min = Math.ceil(1);
-  max = Math.floor(6);
+  min = Math.ceil(min);
+  max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
