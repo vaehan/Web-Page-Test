@@ -1,4 +1,4 @@
 function myFunction()
 {
-console.log("javascript is working.");
+document.write("Testing only")
 }
