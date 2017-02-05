@@ -23,7 +23,7 @@ function WinningHorse()
   }
   
   window.document.write("testing function inside")'
-  var theHorse=GetRandomHorse(1, 6);
+  var theHorse = GetRandomHorse(1, 6);
   window.document.write(theHorse);
 }
 
