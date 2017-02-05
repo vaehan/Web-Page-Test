@@ -1,4 +1,4 @@
 function myFunction()
 {
-document.write("Testing only")
+document.write("Testing only");
 }
