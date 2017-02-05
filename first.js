@@ -22,9 +22,8 @@ function WinningHorse()
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   
-  window.document.write("The Winning Horse is number:  ");
   var theHorse = GetRandomHorse(1, 6);
-  window.document.write(theHorse);
+  return theHorse;
 }
 
 
