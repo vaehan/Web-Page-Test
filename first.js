@@ -22,8 +22,9 @@ function WinningHorse()
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   
-  window.document.write("testing function inside of function<br>")
-  window.document.write(GetRandomHorse(1, 6))
+  window.document.write("testing function inside")'
+  var theHorse=GetRandomHorse(1, 6);
+  window.document.write(theHorse);
 }
 
 
