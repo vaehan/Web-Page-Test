@@ -1,26 +1,38 @@
-// Just a test function to see if I have this right..
-function toDo()
-{
-  window.document.write("Here are a few things I need to do to begin a test program (horse racing):<br>");
-  window.document.write("I need a random generator,<br>");
-  window.document.write("I also need to get an input from user.<br>");
-  window.document.write("First iteration, random 1-6, get input from user (with error checking), compare and output if it's a winner.<br>");
-  window.document.write("Second iteration, add odds tables and wagers.<br>");
-  window.document.write("Third iteration, get the full rankings of horses.<br>");
-}
-
 // Needs to have math in the main file???  Is there a better way?
 // May have to switch to an array for permutations vs using pure random.
 function WinningHorse()
 {
   function GetRandomHorse(min, max)
   {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+	min = Math.ceil(min);
+	max = Math.floor(max);
+	return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-  
- return GetRandomHorse(1, 6);
+
+  return GetRandomHorse(1, 6);
 }
 
+function doSomething(Winner)
+{
+	var x = document.getElementById("UserGuess").value;
+	document.getElementById("demo").innerHTML = x;
+}
 
+function myFunction(Winner)
+{
+	var y = document.getElementById('Winner').value;
+	return y
+}
+
+function CompTest(x, amount, FirstPlace)
+{
+	console.log(x);
+	var Check = 0;
+	if(x == FirstPlace){
+		Check = "  Good job!  You Won!  Collect!";
+	}
+	else{
+		Check = "  Sorry, you did not pick the winning horse.";
+	}
+	return Check;
+}
