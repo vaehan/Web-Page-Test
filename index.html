@@ -1,8 +1,27 @@
+<!-- 
+	Date:  2/5/2017
+	Project 1:  Horse Racing
+
+	Stopping for now, still a lot of work to do!
+
+	I know I'm putting strings EVERYWHERE, need to find a best practice (This is definitely not it).
+	Need to also figure out text formatting.
+	Need to incorporate wagers and a "balance" feature.  Also need to continue the "game" past one iteration!
+	Pretty sure I included the jquery library, but I'm not using it...
+
+	Far Future Items:
+	Data check the horse input.
+	Add features to randomizing horses.  (Names and actual numbers - output them before starting race.)
+	Create a type of Odds calculation.
+-->
+
 <html>
+	<meta charset="UTF-8">
 <head>
 
   <script src="first.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.9.0/math.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <link rel="stylesheet" href="sample.css">
   
 <title>Yay a title!!!</title>
@@ -11,11 +30,26 @@
 <body>
 <h1>Horse Racing (First JS Program Test!)</h1>
 
-  <p>The first place horse is number  
-  <script>
-    var FirstPlace = WinningHorse();
-    window.document.write(FirstPlace);
-    </script></p>
+<!-- I'm sure professors and professionals are rolling in their graves with this piece of code. -->
 
-  </body>
+<p>There are 6 horses racing today.  By clicking on the button below, you begin the race!</p>
+<p></p>
+
+<form id="FourthForm">
+	Pick your horse! (1-6):  <input type="integer" name = "UserGuess" id="UserGuess"/><br>
+  Enter your wager:  <input type="integer" name = "Amount" id = "Amount"/>
+	<input type="button" value="Start Race!"  onclick="getElementById('Race').innerHTML=myString1+FirstPlace+myString2"/>
+</form>
+
+<script>
+var FirstPlace = WinningHorse();
+const myString1 = "The Winning Horse is: ";
+const myString2 = CompTest(document.getElementById('UserGuess').value, document.getElementById('Amount'), FirstPlace);
+</script>
+
+<!-- Uh, yeah...  Not sure how this piece of code works in conjunction with the button's onclick. -->
+
+<p id="Race"></p>
+
+</body>
 </html>
