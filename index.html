@@ -38,14 +38,8 @@
 <form id="FourthForm">
 	Pick your horse! (1-6):  <input type="integer" name = "UserGuess" id="UserGuess"/><br>
   Enter your wager:  <input type="integer" name = "Amount" id = "Amount"/>
-	<input type="button" value="Start Race!"  onclick="getElementById('Race').innerHTML=myString1+FirstPlace+myString2"/>
+	<input type="button" value="Start Race!" onclick = "results()" />
 </form>
-
-<script>
-var FirstPlace = WinningHorse();
-const myString1 = "The Winning Horse is: ";
-const myString2 = CompTest(document.getElementById('UserGuess').value, document.getElementById('Amount'), FirstPlace);
-</script>
 
 <!-- Uh, yeah...  Not sure how this piece of code works in conjunction with the button's onclick. -->
 
