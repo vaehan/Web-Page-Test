@@ -1,6 +1,5 @@
 // Needs to have math in the main file???  Is there a better way?
 // May have to switch to an array for permutations vs using pure random.
-// Going to add some more text just to test out git.
 function WinningHorse()
 {
   function GetRandomHorse(min, max)
