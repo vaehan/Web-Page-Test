@@ -13,24 +13,44 @@ function WinningHorse()
   return GetRandomHorse(1, 6);
 }
 
-function CompTest(x, amount, FirstPlace)
-{
-	var Check = 0;
-	if(x == FirstPlace){
-		Check = "  Good job!  You Won!  Collect!";
-	}
-	else{
-		Check = "  Sorry, you did not pick the winning horse.";
-	}
-	return Check;
-}
-
 function results()
 {
 	var FirstPlace = WinningHorse();
-	const myString1 = "The Winning Horse is: ";
-	const myString2 = CompTest(document.getElementById('UserGuess').value, document.getElementById('Amount'), FirstPlace);
+	var wager = Number(Amount.value);
 
-	document.getElementById('Race').innerHTML = myString1+FirstPlace+myString2;
+	const ANNOUNCEMENT = "The winning horse number:  ";
+	const UPDATEDBALANCE = "Your new balance is: ";
+
+	const YOUWIN = "Congratulations!  You win!  Race again?";
+	const YOULOSE = "Sorry, not a winner.  Race again?";
+
+	document.getElementById('FirstHorse').innerHTML = ANNOUNCEMENT+FirstPlace;
+
+	if(isWinner(document.getElementById('UserGuess').value, FirstPlace)){
+		document.getElementById('RaceResults').innerHTML = YOUWIN;
+		bank.balance += wager;}
+	else{
+		document.getElementById('RaceResults').innerHTML = YOULOSE;
+		bank.balance -= wager}
+
+
+	document.getElementById('BalanceStatement').innerHTML = UPDATEDBALANCE+bank.balance;
 }
+
+
+function isWinner(guess, winner)
+{
+	if(guess == winner){
+		return true;
+	}
+	else{
+		return false;}
+}
+
+
+function getBalance()
+{
+	document.write(bank.balance);
+}
+
 

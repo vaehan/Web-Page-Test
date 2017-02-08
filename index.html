@@ -1,4 +1,19 @@
 <!-- 
+	Date:  2/7/2017
+	Small improvements;
+	
+	Adjusted logic in js file.  Still having issues with a "master" function that calls other functions.  Wasn't a good
+	idea in college, probably not a good idea now.  Cleaned up some functions - made it a bit easier to read.
+
+	Game runs for more than one iteration!
+
+	Added some filler for horse names.  Think about connecting to an XML database and randomizing?
+
+	Added wager functionality.
+
+
+
+
 	Date:  2/5/2017
 	Project 1:  Horse Racing
 
@@ -23,6 +38,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.9.0/math.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <link rel="stylesheet" href="sample.css">
+
+  <script>
+	var bank = {balance: 100};  
+  </script>
   
 <title>Yay a title!!!</title>
 </head>
@@ -33,17 +52,27 @@
 <!-- I'm sure professors and professionals are rolling in their graves with this piece of code. -->
 
 <p>There are 6 horses racing today.  By clicking on the button below, you begin the race!</p>
-<p></p>
+(Eventually connect XML and randomize this list?)<br>
+<p>(1) "Seabiscuit" - blah blah blah.</p>
+<p>(2) "Domino" - blah blah blah.</p>
+<p>(3) "Twilight Tear" - blah blah blah.<p>
+<p>(4) "Count Fleet" - blah blah blah.</p>
+<p>(5) "Tom Fool" - blah blah blah.</p>
+<p>(6) "Zenyatta" - blah blah blah.</p>
+
+<br>
 
 <form id="FourthForm">
-	Pick your horse! (1-6):  <input type="integer" name = "UserGuess" id="UserGuess"/><br>
-  Enter your wager:  <input type="integer" name = "Amount" id = "Amount"/>
+	Pick your horse! (1-6):  <input type="number" min="1" max = "6" name = "UserGuess" id="UserGuess"/><br>
+  Enter your wager:  <input type="number" name = "Amount" id = "Amount"/>
 	<input type="button" value="Start Race!" onclick = "results()" />
 </form>
 
-<!-- Uh, yeah...  Not sure how this piece of code works in conjunction with the button's onclick. -->
+<p id="BalanceStatement">Starting Balance = <script>getBalance()</script></p>
+<br>
+<p id="FirstHorse"></p>
 
-<p id="Race"></p>
+<p id="RaceResults"></p>
 
 </body>
 </html>
