@@ -1,6 +1,12 @@
 // Needs to have math in the main file???  Is there a better way?
 // May have to switch to an array for permutations vs using pure random.
 // Going to add some more text just to test out git.
+
+
+
+// function WinningHorse() not needed any more.  Used for an older random number
+// generator without weights.  Now using newRandomHorse() function.
+
 function WinningHorse()
 {
   function GetRandomHorse(min, max)
@@ -15,7 +21,16 @@ function WinningHorse()
 
 function results()
 {
-	var FirstPlace = WinningHorse();
+	//Old code
+//	var FirstPlace = WinningHorse();
+
+
+	// New code
+	// OK, now that I have weighted values, I need a way to map numbers
+	// to actual names.
+	var FirstPlace = newRandomHorse();
+	// End new code
+	
 	var wager = Number(Amount.value);
 
 	const ANNOUNCEMENT = "The winning horse number:  ";
@@ -54,3 +69,20 @@ function getBalance()
 }
 
 
+function newRandomHorse()
+{
+	var horses=["1", "2", "3", "4", "5", "6"];
+	var horseweight=[40, 5, 20, 10, 5, 20];
+	var totalhorse=eval(horseweight.join("+"));
+	var weighedhorse=new Array();
+	var currenthorse=0;
+
+	while (currenthorse<horses.length){
+		for(i=0; i<horseweight[currenthorse]; i++)
+			weighedhorse[weighedhorse.length]=horses[currenthorse]
+		currenthorse++;
+	}
+
+	var randomhorse=Math.floor(Math.random()*totalhorse);
+	return weighedhorse[randomhorse];
+}
