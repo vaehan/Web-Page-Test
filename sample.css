@@ -21,7 +21,7 @@ body
 }
 
 #splash{
-	background-image:url('HorseWallpaper.jpg');
+	background-image:url("HorseWallpaper.jpg");
 	background-size:cover;
 	background-position:center;
 	height:100vh;
