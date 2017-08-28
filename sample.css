@@ -17,6 +17,7 @@ body
 	font-size:24px;
 	color:#e2e044;
 	line-height:1.6;
+	background-color:#208722;
 
 }
 
@@ -55,4 +56,11 @@ body
 #splash .button:hover{
 	background:#e2e044;
 	color:#fff;
+}
+
+#race-content{
+	padding:20px;
+	background:#926239;
+	color:#fff;
+	text-align:center;
 }
