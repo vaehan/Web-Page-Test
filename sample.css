@@ -1,13 +1,13 @@
-body
-{
+body{
 	margin:0;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-size:24px;
-	color:#e2e044;
 	line-height:1.6;
+  color:#e2e044;
 	background-color:#208722;
-
 }
+
+/* Splash style start */
 
 #splash{
 	background-image:url("img/HorseWallpaper.jpg");
@@ -45,6 +45,8 @@ body
 	background:#e2e044;
 	color:#fff;
 }
+
+/* Main content start */
 
 #race-content{
 	padding:20px;
